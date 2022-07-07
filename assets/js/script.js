@@ -23,4 +23,24 @@ $("#currentDay").text(moment().format('dddd, MMMM Do'));
 
 timeBlockBackground();
 
+var loadPlans = function() {
+    plans = JSON.parse(localStorage.getItem("plans"));
 
+    if (!plans) {
+        plans = {
+            plannedEvent: []
+        };
+    }
+}
+
+
+
+// var savePlans = function() {
+//     localStorage.setItem("plans", JSON.stringify(plans));
+// };
+
+// $(.saveBtn).click(function() {
+
+//     var plans = $("#fieldEntry").val();
+//     savePlans();
+// });
