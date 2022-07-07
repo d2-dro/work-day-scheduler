@@ -31,7 +31,11 @@ var loadPlans = function() {
             plannedEvent: []
         };
     }
-}
+};
+
+var savePlans = function() {
+    localStorage.setItem("plans", JSON.stringify("plans"));
+};
 
 
 
